@@ -264,13 +264,20 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: auto;
+}
+
+.brand-logo {
+  margin-left: -5rem;
+  display: flex;
+  align-items: center;
 }
 
 .brand-logo .logo-img {
-  height: 54px;
+  height: 115px;
   width: auto;
   object-fit: contain;
+  transition: all var(--transition-normal);
 }
 
 .nav-list {
@@ -1289,6 +1296,84 @@ ul {
   }
 }
 
+/* ==========================================================================
+   SECCIÓN PROVEEDORES / MARCAS SLIDER
+   ========================================================================== */
+.proveedores-section {
+  padding: 4rem 0 4.5rem 0;
+  background-color: var(--bg-body);
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.logos-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
+  /* Máscara de degradado transparente en extremos para un desvanecimiento suave */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.logos-slider-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  /* Desplazamiento continuo moderadamente lento de izquierda a derecha */
+  animation: slideRight 28s linear infinite;
+  will-change: transform;
+}
+
+.logos-slider-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.logo-item img {
+  max-height: 85px;
+  max-width: 210px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* Escala de grises por defecto */
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Al pasar el mouse vuelve a su color original con ligera amplificación */
+.logo-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Animación fluida de Izquierda a Derecha */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 /* ==================== MEDIA QUERIES (RESPONSIVO) ==================== */
 @media (max-width: 1024px) {
   .products-grid {
@@ -1365,6 +1450,16 @@ ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .logos-slider-track {
+    gap: 1.8rem;
+    animation-duration: 25s;
+  }
+
+  .logo-item img {
+    max-height: 65px;
+    max-width: 160px;
   }
 }
 

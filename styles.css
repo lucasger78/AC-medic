@@ -1396,7 +1396,7 @@ ul {
   }
   
   .brand-logo .logo-img {
-    height: 95px;
+    height: 115px;
   }
 
   .hero-title {
@@ -1477,7 +1477,7 @@ ul {
 
 @media (max-width: 480px) {
   .brand-logo .logo-img {
-    height: 75px;
+    height: 85px;
   }
 
   .gallery-badge {

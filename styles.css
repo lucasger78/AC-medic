@@ -365,6 +365,10 @@ ul {
   object-fit: cover;
 }
 
+.hero-video-mobile {
+  display: none;
+}
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -1391,6 +1395,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .hero-video-desktop {
+    display: none;
+  }
+
+  .hero-video-mobile {
+    display: block;
+  }
+
   .brand-logo {
     margin-left: 0;
   }

@@ -1396,7 +1396,7 @@ ul {
   }
   
   .brand-logo .logo-img {
-    height: 115px;
+    height: 110px;
   }
 
   .hero-title {
@@ -1430,10 +1430,10 @@ ul {
   
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 95px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 95px);
     background-color: #ffffff;
     padding: 2rem;
     transition: var(--transition-normal);
@@ -1477,7 +1477,7 @@ ul {
 
 @media (max-width: 480px) {
   .brand-logo .logo-img {
-    height: 85px;
+    height: 100px;
   }
 
   .gallery-badge {

@@ -1387,6 +1387,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  .brand-logo {
+    margin-left: 0;
+  }
+  
+  .brand-logo .logo-img {
+    height: 65px;
+  }
+
   .hero-title {
     font-size: 2.25rem;
   }
@@ -1464,6 +1472,10 @@ ul {
 }
 
 @media (max-width: 480px) {
+  .brand-logo .logo-img {
+    height: 55px;
+  }
+
   .products-grid {
     grid-template-columns: 1fr;
   }

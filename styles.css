@@ -547,12 +547,14 @@ ul {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 4px solid #ffffff;
+  background-color: var(--bg-light);
 }
 
 .gallery-img {
   width: 100%;
-  height: 380px;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .gallery-badge {
@@ -586,11 +588,13 @@ ul {
 
 .sub-img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: auto;
+  display: block;
+  object-fit: contain;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   border: 2px solid #ffffff;
+  background-color: var(--bg-light);
 }
 
 /* ==================== GALERÍA DE PRODUCTOS ==================== */
@@ -1392,7 +1396,7 @@ ul {
   }
   
   .brand-logo .logo-img {
-    height: 65px;
+    height: 85px;
   }
 
   .hero-title {
@@ -1473,7 +1477,14 @@ ul {
 
 @media (max-width: 480px) {
   .brand-logo .logo-img {
-    height: 55px;
+    height: 75px;
+  }
+
+  .gallery-badge {
+    bottom: 10px;
+    left: 10px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.78rem;
   }
 
   .products-grid {
